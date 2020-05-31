@@ -1,0 +1,89 @@
+{
+	"configuration": {
+		"status": "error",
+		"name": "PropertiesConfig",
+		"properties": {
+			"property": [
+				{
+					"name": "logRootDir",
+					"value": "/home/rajivranjan/"
+				},
+				{
+					"name": "Directory",
+					"value": "${logRootDir}/apilogs"
+				},
+				{
+					"name": "FileName",
+					"value": "errorlog.log"
+				},
+				{
+					"name": "RequestLogFileName",
+					"value": "requestlog.log"
+				}
+			]
+		},
+		"appenders": {
+			"Console": {
+				"name": "STDOUT",
+				"PatternLayout": {
+					"pattern": "[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n"
+				}
+			},
+			"RollingRandomAccessFile": [
+				{
+					"name": "File",
+					"fileName": "${Directory}/${FileName}",
+					"filePattern": "${Directory}/errorlog-%d{MM-dd-yyyy}-%i.log",
+					"PatternLayout": {
+						"pattern": "[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n"
+					},
+					"Policies": {
+						"SizeBasedTriggeringPolicy": {
+							"size": "20 MB"
+						}
+					},
+					"DefaultRolloverStrategy": {
+						"max": 5
+					}
+				},
+				{
+					"name": "requestFile",
+					"fileName": "${Directory}/${RequestLogFileName}",
+					"filePattern": "${Directory}/requestlog-%d{MM-dd-yyyy}-%i.log",
+					"PatternLayout": {
+						"pattern": "[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n"
+					},
+					"Policies": {
+						"SizeBasedTriggeringPolicy": {
+							"size": "5 MB"
+						}
+					},
+					"DefaultRolloverStrategy": {
+						"max": 5
+					}
+				}
+			]
+		},
+		"loggers": {
+			"root": {
+				"level": "info",
+				"AppenderRef": [
+					{
+						"ref": "File",
+						"level": "error"
+					},
+					{
+						"ref": "requestFile",
+						"level": "debug"
+					}
+				]
+			},
+			"logger": [
+				{
+					"name": "com.restful.webservices.restfulWebServices",
+					"level": "info"
+				}
+			]
+		}
+	}
+}
