@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.restful.webservices.restfulWebServices.dao;
+package com.restful.webservices.restfulWebServices.readDao;
 
 import java.util.Optional;
 
@@ -15,7 +15,7 @@ import com.restful.webservices.restfulWebServices.Model.Student;
  *
  */
 @Transactional
-public interface StudentRepository extends JpaRepository<Student,Integer>{
+public interface StudentReadRepository extends JpaRepository<Student,Integer>{
 	
   public Optional<Student> findById(Integer id);
 

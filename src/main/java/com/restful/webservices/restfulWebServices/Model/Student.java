@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
  * @author rajivranjan
  *
  */
-@Entity
+@Entity(name="student")
 @Data
 @NoArgsConstructor
 public class Student {

@@ -69,8 +69,8 @@
 				"level": "info",
 				"AppenderRef": [
 					{
-						"ref": "File",
-						"level": "error"
+						"ref": "STDOUT",
+						"level": "debug"
 					},
 					{
 						"ref": "requestFile",
