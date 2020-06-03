@@ -29,7 +29,7 @@ import static com.restful.webservices.restfulWebServices.configuration.CommonCon
 @EnableJpaRepositories(
         entityManagerFactoryRef = "entityManagerFactoryWrite",
         transactionManagerRef = "transactionManagerWrite",
-        basePackages = {"com.restful.webservices.restfulWebServices.writeDao"}
+        basePackages = {"com.restful.webservices.restfulWebServices.writeRepository"}
 )
 public class DataSourceWriteConfig extends HikariConfig {
 	public final static String PERSISTENCE_UNIT_NAME = "write";

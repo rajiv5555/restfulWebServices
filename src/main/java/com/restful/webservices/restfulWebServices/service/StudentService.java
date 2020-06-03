@@ -3,8 +3,6 @@
  */
 package com.restful.webservices.restfulWebServices.service;
 
-import java.util.List;
-
 import com.restful.webservices.restfulWebServices.Model.Student;
 
 /**
@@ -13,7 +11,13 @@ import com.restful.webservices.restfulWebServices.Model.Student;
  */
 public interface StudentService {
 
-	public List<Student> getAllStudet();
+	public Iterable<Student> getAllStudet();
 
 	public Student getStudent(Integer id);
+
+	public void saveStudent(Student student);
+
+	public Student updateStudent(Student student);
+
+	public Integer deleteObj(Student stud);
 }

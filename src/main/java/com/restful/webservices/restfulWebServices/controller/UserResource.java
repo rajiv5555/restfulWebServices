@@ -59,18 +59,18 @@ public class UserResource {
 		return model;
 	}*/
 	
-	/*@GetMapping(path="/users/{id}")
+	@GetMapping(path="/users/{id}")
 	public User findById(@PathVariable Integer id) {
 		User us= userDaoService.findOne(id);
 		if(us==null)
-			throw new UserNotFoundException("id- "+id);
+			throw new UserNotFoundException("user not found id- "+id);
 		//Hypermedia as the engine of Application state
 		//HATEOUS concept here
-		Resource<User> resource = new Resource<User>(us);
-		ControllerLinkBuilder linkTo = ControllerLinkBuilder.linkTo(ControllerLinkBuilder.methodOn(this.getClass()).getAllUser());
-		resource.add(linkTo.withRel("all-users"));
+		//Resource<User> resource = new Resource<User>(us);
+		//ControllerLinkBuilder linkTo = ControllerLinkBuilder.linkTo(ControllerLinkBuilder.methodOn(this.getClass()).getAllUser());
+		//resource.add(linkTo.withRel("all-users"));
 		return us;
-	}*/
+	}
 	
 	@PostMapping(path="/users")
 	public ResponseEntity<Object> addUser(/*@Valid*/ @RequestBody User user) {

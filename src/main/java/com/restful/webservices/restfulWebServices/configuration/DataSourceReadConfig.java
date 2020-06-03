@@ -29,7 +29,7 @@ import static com.restful.webservices.restfulWebServices.configuration.CommonCon
 @EnableJpaRepositories(
         entityManagerFactoryRef = "entityManagerFactoryRead",
         transactionManagerRef = "transactionManagerRead",
-        basePackages = {"com.restful.webservices.restfulWebServices.readDao"}
+        basePackages = {"com.restful.webservices.restfulWebServices.readRepository"}
 )
 public class DataSourceReadConfig extends HikariConfig {
 

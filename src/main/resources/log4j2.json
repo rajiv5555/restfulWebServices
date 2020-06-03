@@ -31,7 +31,7 @@
 			},
 			"RollingRandomAccessFile": [
 				{
-					"name": "File",
+					"name": "errorFile",
 					"fileName": "${Directory}/${FileName}",
 					"filePattern": "${Directory}/errorlog-%d{MM-dd-yyyy}-%i.log",
 					"PatternLayout": {
@@ -69,8 +69,8 @@
 				"level": "info",
 				"AppenderRef": [
 					{
-						"ref": "STDOUT",
-						"level": "debug"
+						"ref": "errorFile",
+						"level": "error"
 					},
 					{
 						"ref": "requestFile",
