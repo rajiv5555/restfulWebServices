@@ -55,7 +55,7 @@ public class StudentController {
 		return student;
 	}
 	
-	@DeleteMapping
+	@DeleteMapping("/student")
 	public Integer deleteStudent(@RequestBody Student stud) {
 		log.info(" delete obj : "+stud);
 		Integer id=studentService.deleteObj(stud);
