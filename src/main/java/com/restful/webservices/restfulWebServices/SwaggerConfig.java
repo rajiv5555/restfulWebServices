@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.restful.webservices.restfulWebServices.configuration;
+package com.restful.webservices.restfulWebServices;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

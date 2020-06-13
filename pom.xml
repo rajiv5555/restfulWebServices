@@ -106,6 +106,21 @@
 			<optional>true</optional>
 		</dependency> 
 		
+	  <dependency>
+	    <groupId>io.leangen.graphql</groupId>
+	    <artifactId>graphql-spqr-spring-boot-starter</artifactId>
+	    <version>0.0.4</version>
+	  </dependency>
+	  
+	  
+		<dependency>
+		    <groupId>io.projectreactor</groupId>
+		    <artifactId>reactor-core</artifactId>
+		    <version>3.3.6.RELEASE</version>
+		</dependency>
+	  
+	  
+
 		<!-- additional jar -->
 		
 		<dependency>

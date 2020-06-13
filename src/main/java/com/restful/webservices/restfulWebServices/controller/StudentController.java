@@ -62,5 +62,4 @@ public class StudentController {
 		return id;
 	}
 	
-	
 }
